@@ -1,3 +1,4 @@
+#Example : how to restore a snapshot
 import subprocess
 import virtualbox
 
@@ -15,7 +16,7 @@ if vm.state != 1:
 else:
     print("è spenta")
 
-
-#subprocess.call(['VBoxManage', 'snapshot', vm_name, 'restore', "vm_post_prova"])
-#subprocess.call(['VBoxManage', 'startvm', vm_name])
+# restore snap and restart machine
+subprocess.call(['VBoxManage', 'snapshot', vm_name, 'restore', "vm_post_prova"])
+subprocess.call(['VBoxManage', 'startvm', vm_name])
 
