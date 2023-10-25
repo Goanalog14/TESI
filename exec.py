@@ -1,3 +1,4 @@
+#Example: how to use VBoxMange guestcontrol
 import subprocess
 import virtualbox
 
