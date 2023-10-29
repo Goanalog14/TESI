@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+{% set url = 'http://' ~ ip ~ ':8080/uploader' %}
+<form action = {{url}} method = "POST" 
+         enctype = "multipart/form-data" style="margin: 2.6em;">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+</form>
+
+
+<table>
+<thead>
+    <tr><th>Nome</th><th>Dimensione</th><th>Ultima Modifica</th></tr>
+</thead>
+<tbody>
+    {% for x in files %}
+    <tr>
+        <td > <span><i class="{{x['type']}}" style="margin: 2.6em;"></i>{{ x['name'] }}</span></td>
+        <td align="center">{{ x['bytes'] }}</td>
+        <td>{{ x['time'] }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
