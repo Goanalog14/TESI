@@ -6,7 +6,6 @@ import fcntl
 import struct
 
 app = Flask(__name__)
-baseFolder="/home/simone/Scrivania/hello_flask/dir"
 UPLOAD_FOLDER = "/home/simone/Scrivania/hello_flask/dir"
 
 @app.route("/")
@@ -47,13 +46,13 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def virus():
     def selectStat(x):
         fileStat = x.stat()
-        file_path = os.path.join(baseFolder,x)
+        file_path = os.path.join(UPLOAD_FOLDER,x)
         fIcon = 'bi bi-folder-fill' if os.path.isdir(file_path) else 'bi bi-file-earmark-text'
         
         fileSize = getReadableByteSize(fileStat.st_size)
         fileTimestamp = getTimeStampString(fileStat.st_mtime)
         return {'name':x.name, 'bytes':fileSize, 'time':fileTimestamp,'type':fIcon}
-    Files= [selectStat(x) for x in os.scandir(baseFolder)]
+    Files= [selectStat(x) for x in os.scandir(UPLOAD_FOLDER)]
     return  render_template('files.html',files=Files,ip=ip_address)
 
 
