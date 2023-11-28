@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, make_response
 import os
 import datetime as dt
 import socket
@@ -55,6 +55,13 @@ def virus():
     Files= [selectStat(x) for x in os.scandir(UPLOAD_FOLDER)]
     return  render_template('files.html',files=Files,ip=ip_address)
 
+@app.route("/virus/<file_name>")
+def get_virus(file_name):
+    filepath = os.path.join(UPLOAD_FOLDER,file_name)
+    if os.path.exists(filepath):
+        return make_response("Il file esiste",200)
+    else: 
+        return make_response("Il file non esiste",404)
 
 @app.route("/uploader", methods=['POST'])
 def post_file():
