@@ -1,4 +1,4 @@
-# Virus_test_eset
+# Virus test eset
 Il repository è composto principalmente di 4 directory e un programma in python chiamato **main_virus.py** che si occupa di automatizzare l'attività di testing.
 Mentre per quanto riguarda le directory abbiamo:
 ## Script
