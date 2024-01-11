@@ -6,7 +6,7 @@ import fcntl
 import struct
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "/home/simone/Scrivania/hello_flask/dir"
+UPLOAD_FOLDER = "/home/user/virus_test_eset/flask_server/virus"
 
 @app.route("/")
 def homepage():
