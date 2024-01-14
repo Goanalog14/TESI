@@ -34,6 +34,7 @@ dir_virus="/home/kali/Virus/set_virus"
 file = "/usr/bin/file"
 curl = "/usr/bin/curl"
 chmod = "/usr/bin/chmod"
+ls = "/usr/bin/ls"
 
 
 vbox = virtualbox.VirtualBox()
@@ -244,7 +245,6 @@ def pack(virus):
 #  inizio
 def main(packer,headless):
     #inserisci in un array tutti i file della dir dei virus
-    ls = "/usr/bin/ls"
     ls_command = ["VBoxManage", "guestcontrol", analyzer, "run", ls, "--username", username_analyzer, "--password", password_analyzer, "--wait-stdout","--",dir_virus]
     result = subprocess.run(ls_command,stdout = subprocess.PIPE,universal_newlines = True)
     output = result.stdout
