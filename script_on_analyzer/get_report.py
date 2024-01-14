@@ -8,7 +8,7 @@ username = "root"
 password = "password"
 remote_file_path = "/opt/eset/eea/sbin/report.csv"
 local_file_path = "/home/kali/Virus_test_eset/report.csv"
-print("forse siamo sulla buona strada")
+
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
