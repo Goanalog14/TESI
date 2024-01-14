@@ -267,7 +267,7 @@ def main(packer,headless):
 
 if __name__ == '__main__':
     # Creare un oggetto parser
-    parser = argparse.ArgumentParser(description="Automation")
+    parser = argparse.ArgumentParser()
 
     # Aggiungere l'argomento "--packer" e "--headless"
     parser.add_argument('--packer', action='store_true', help='invia virus al server packato')
