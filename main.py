@@ -208,12 +208,11 @@ def exe(virus):
     
 
 def pack(virus):
-    
-    
     print("MODALITÀ PACKER")
     virus_path = os.path.join(dir_virus,virus)
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    
     try:
         ssh.connect(ip_analyzer, porta_analyzer, username_analyzer, password_analyzer)
         #pack.py packa il virus e lo invia insieme al loader
