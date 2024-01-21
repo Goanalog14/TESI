@@ -174,13 +174,13 @@ def exe_inside_sandbox(virus,packer):
     except subprocess.CalledProcessError as e:
         # Se il comando restituisce un codice di ritorno diverso da zero (34), gestisci l'errore
         if packer:
-            data = [datetime.now(), get_bit(virus), get_sha1(virus), " ",e.stderr.strip()]
+            data = [datetime.now(), " ", " ", " ",e.stderr.strip()]
         else: 
             data = [datetime.now(), get_sha1(virus).strip(), virus,e.stderr.strip()]
     except TimeoutError:
         # Se il timeout viene raggiunto, restituisci "TIME EXCEEDED"
         if packer:
-            data = [datetime.now(), get_bit(virus), get_sha1(virus), " ", "TIME EXCEEDED"]
+            data = [datetime.now(), " ", " ", " ", "TIME EXCEEDED"]
         else:
             data = [datetime.now(), get_sha1(virus).strip(), virus, "TIME EXCEEDED"]
     finally:
@@ -229,6 +229,8 @@ def pack(virus):
     if check_virus(virus) == "Il file esiste":
         #esegui virus
         data = exe_inside_sandbox("loader",True)
+        data[1] = get_bit(virus)
+        data[2] = get_sha1(virus)
         data[3] = virus
         #aggiungi in un report a parte
         if "pack_virus.csv" not in os.listdir(working_dir):
