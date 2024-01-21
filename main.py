@@ -199,8 +199,8 @@ def exe(virus):
         data = exe_inside_sandbox(virus,False)
         #aggiungi in un report a parte
         if "report_virus.csv" not in os.listdir(working_dir):
-            create_csv_virus("report_virus.csv")
-        add_row("report_virus.csv",data)
+            create_csv_virus("passed_virus_report.csv")
+        add_row("passed_virus_report.csv",data)
     else:
         #crea file report
         if eset_csv not in os.listdir(working_dir):
