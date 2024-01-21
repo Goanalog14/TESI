@@ -6,7 +6,6 @@ Date,Hash,Filename,Result
 2023-12-05 11:41:04.396865,304217529b8af1ef7c2bbdd4e1b3daccc83e61ba,VirusShare_03b2379ba8eb19bf86f3bf4cc9ce1ff4,/home/user/virus_test_eset/flask_server/virus/VirusShare_03b2379ba8eb19bf86f3bf4cc9ce1ff4: 1: Syntax error: word unexpected (expecting \")\")
 2023-12-05 11:41:34.528406,3bf518558d3271ec957f2df35121c326be42577b,VirusShare_03ee7961fda3fba46a3555f127112b9b,/home/user/virus_test_eset/flask_server/virus/VirusShare_03ee7961fda3fba46a3555f127112b9b: 1: Syntax error: \"(\" unexpected
 2023-12-05 11:42:09.676964,8ea8bf86bf3761898ad2ed17e23c60be9bd47d3c,VirusShare_04cfc98899e80e3eb1c57bf35b650a81,/home/user/virus_test_eset/flask_server/virus/VirusShare_04cfc98899e80e3eb1c57bf35b650a81: 1: Syntax error: word unexpected (expecting \")\")
-2023-12-05 11:42:39.831639,da39a3ee5e6b4b0d3255bfef95601890afd80709,VirusShare_04edbeb40f07e34d5e23dd22015c8792,
 2023-12-05 11:43:15.065903,3d6712cce6ed27c96d44738d16b6831121f35022,VirusShare_0558da0c2160a71b1b598173e8f10caf,/home/user/virus_test_eset/flask_server/virus/VirusShare_0558da0c2160a71b1b598173e8f10caf: 1: Syntax error: word unexpected (expecting \")\")
 2023-12-05 11:43:43.398325,62173faf21aef4fd622672cfd46727f136bdd099,VirusShare_07c219c121c03c42122c181e0c5c6723,/home/user/virus_test_eset/flask_server/virus/VirusShare_07c219c121c03c42122c181e0c5c6723: 1: Syntax error: word unexpected (expecting \")\")
 2023-12-05 11:44:19.037025,ce8bf3e219791243a14f55ae497a381038f22b07,VirusShare_07e17870c523237a6fc7d65ab7407f8a,
