@@ -198,7 +198,7 @@ def exe(virus):
     if check_virus(virus) == "Il file esiste":
         data = exe_inside_sandbox(virus,False)
         #aggiungi in un report a parte
-        if "report_virus.csv" not in os.listdir(working_dir):
+        if "passed_virus_report.csv" not in os.listdir(working_dir):
             create_csv_virus("passed_virus_report.csv")
         add_row("passed_virus_report.csv",data)
     else:
@@ -235,9 +235,9 @@ def pack(virus):
         data[2] = get_sha1(virus)
         data[3] = virus
         #aggiungi in un report a parte
-        if "pack_virus.csv" not in os.listdir(working_dir):
-            create_pack_virus("pack_virus.csv")
-        add_row("pack_virus.csv",data)
+        if "pack_report.csv" not in os.listdir(working_dir):
+            create_pack_virus("pack_report.csv")
+        add_row("pack_report.csv",data)
     else:
         get_report()
         update_csv(eset_csv)
