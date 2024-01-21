@@ -141,6 +141,7 @@ def update_csv(nome_csv):
 
 
 def check_virus(virus):
+    sleep(1)
     #controlla se il virus è passato
     get_url = os.path.join("http://192.168.56.101:8080/virus",virus)
     curl_command = ["VBoxManage", "guestcontrol", analyzer, "run", curl, "--username", username_analyzer, "--password", password_analyzer, "--wait-stdout","--",get_url]
