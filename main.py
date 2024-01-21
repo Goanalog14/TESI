@@ -12,7 +12,7 @@ import paramiko
 
 
 working_dir = "/home/simone/Desktop/Tesi"
-my_csv = "my_report.csv"
+
 
 #sandbox
 sandbox = "eset"
@@ -21,6 +21,7 @@ username_sandbox = "user"
 password_sandbox = "password"
 dir_virus_on_server="/home/user/virus_test_eset/flask_server/virus"
 url = "http://192.168.56.101:8080/uploader"
+eset_csv = "eset.csv"
 
 #analyzer
 analyzer = "kali-linux"
@@ -134,7 +135,7 @@ def add_row(nome_csv,data):
 
 def update_csv(nome_csv):
     last_row = get_last_row("report.csv")
-    add_row(my_csv,last_row)
+    add_row(eset_csv,last_row)
 
 
 
@@ -201,10 +202,10 @@ def exe(virus):
         add_row("report_virus.csv",data)
     else:
         #crea file report
-        if my_csv not in os.listdir(working_dir):
-            create_csv(my_csv)
+        if eset_csv not in os.listdir(working_dir):
+            create_csv(eset_csv)
         get_report()
-        update_csv(my_csv)
+        update_csv(eset_csv)
     
 
 def pack(virus):
@@ -238,7 +239,7 @@ def pack(virus):
         add_row("pack_virus.csv",data)
     else:
         get_report()
-        update_csv(my_csv)
+        update_csv(eset_csv)
 
 
 #  inizio
