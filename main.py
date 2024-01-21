@@ -110,7 +110,7 @@ def get_last_row(nome_csv):
             last_row = row
     return last_row
 
-def create_csv(nome_csv):
+def create_eset_csv(nome_csv):
     data = ['Time detected', 'Severity', 'Scanner', 'Object URI', 'Detection', 'Detection Type', 'Action', 'User', 'Application', 'Circumstances', 'Hash', 'Raw detection name']
     with open(nome_csv,"w") as r:
         writer = csv.writer(r)
@@ -204,7 +204,7 @@ def exe(virus):
     else:
         #crea file report
         if eset_csv not in os.listdir(working_dir):
-            create_csv(eset_csv)
+            create_eset_csv(eset_csv)
         get_report()
         update_csv(eset_csv)
     
