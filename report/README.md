@@ -8,4 +8,4 @@ All'interno delle due directory presenti, sono contenuti per ognuna due report:
 ## report ESET
 All'interno del file csv eset_report.csv è presente l'analisi effettuata dall'antivirus, unicamente sui virus che riesce a riconoscere
 ## report dei virus non riconosciuti
-Per la directory "non_offuscati" è presente il file "passed_virus_report", mentre per la directory "offuscati" è presente il file "pack_report" 
+Per la directory "non_offuscati" è presente il file "passed_virus_report.csv", mentre per la directory "offuscati" è presente il file "pack_report.csv" 
