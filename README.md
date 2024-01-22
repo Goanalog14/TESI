@@ -8,4 +8,4 @@ che contiene il server flask in grado di ricevere le get e le post dei virus e c
 ## script_on_analyzer
 che contiene gli script che da main_virus.py vengono richiamati direttamente sulla macchina analyzer ed eseguiti
 ## report
-che contiene i report generati dall'esecuzione del programma main_virus.py
+che contiene i report generati dall'esecuzione del programma main.py
